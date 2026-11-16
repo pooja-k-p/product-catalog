@@ -1,36 +1,22 @@
-
-import { Route,Routes } from 'react-router-dom'
-import './App.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import History from './pages/History'
-import Home from './pages/Home'
-import Steps from './pages/Steps'
-import Userform from './pages/Userform'
-import ViewResume from './pages/ViewResume'
-import Pnf from './pages/Pnf'
-
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import ProductList from "./components/productlist";
+import ProductForm from "./components/ProductForm";
 
 function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Navigate to="/products" />} />
 
+                <Route path="/products" element={<ProductList />} />
 
-  return (
-    <>
-      <Header />
-      <Routes>
+                <Route path="/add-product" element={<ProductForm />} />
 
-        <Route path='/' element={<Home />} />
-        <Route path='/Steps' element={<Steps />} />
-        <Route path='/History' element={<History />} />
-        <Route path='/Userform' element={<Userform />} />
-        <Route path='/view/:id' element={<ViewResume />} />
-        <Route path='/*' element={<Pnf />} />
-
-      </Routes>
-
-      <Footer />
-    </>
-  )
+                <Route path="/edit-product/:id" element={<ProductForm />} />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App

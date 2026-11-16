@@ -1,17 +1,44 @@
-#part1{
-background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIA3cxkmAhRDbUe8QeQqW4aqD-PmDJw-0dn7p2sVT5R-EKruh_QdbtS_XR&s=10);
-
-height: 550px;
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#part2{
-background-image: url(https://india.entrepreneur.com/wp-content/uploads/sites/5/2018/08/20170731075114-two-young-woman-at-office-working-on-a-new-creative-design-diverse-team-of-professionals-looking-at-a-document-smiling-balivh4tl2.jpg);
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
 
-height: 550px;
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+h2 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
 }
